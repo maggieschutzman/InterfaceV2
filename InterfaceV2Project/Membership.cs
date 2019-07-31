@@ -3,26 +3,26 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace InterfaceV2Project {
-    public class Service : ICalcSales {
+    class Membership : ICalcSales {
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Rate { get; set; }
-        public int Hours { get; set; }
+        public int Fee { get; set; }
+        public int Units { get; set; }
 
         public decimal CalcSales() {
-            return Rate * Hours;
+            return Fee * Units;
         }
 
-        public Service(int id, string name, int rate, int hours) {
+        public Membership(int id, string name, int fee, int units) {
             this.Id = id;
             this.Name = name;
-            this.Rate = rate;
-            this.Hours = hours;
+            this.Fee = fee;
+            this.Units = units;
         }
 
         public string About() {
-            return "About Services";
-        }
+            return "About Membership";
+        }        
     }
 }

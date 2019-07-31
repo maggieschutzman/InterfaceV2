@@ -17,7 +17,13 @@ namespace InterfaceV2Project {
         }
 
         public decimal CalcSales() {
-            throw new NotImplementedException();
+            return Price * Units;
         }
+
+        public string About() {
+            return "About Products";
+        }
+
+
     }
 }
